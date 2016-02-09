@@ -71,8 +71,16 @@ export default class PaginationListView extends Component {
         let breakLabelKey   = keys[keys.length - 1];
         let breakLabelValue = items[breakLabelKey];
 
-        if (breakLabelValue !== this.props.breakLabel) {
-          items['key' + index] = this.props.breakLabel;
+        if (breakLabelValue !== this.props.breakLabel &&
+          breakLabelValue !== this.props.leftBreakLabel &&
+          breakLabelValue !== this.props.rightBreakLabel) {
+          let breakLabel;
+          if (index < this.props.selected) {
+            breakLabel = this.props.leftBreakLabel || this.props.breakLabel;
+          } else {
+            breakLabel = this.props.rightBreakLabel || this.props.breakLabel;
+          }
+          items['key' + index] = breakLabel;
         }
       }
     }

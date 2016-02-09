@@ -13,6 +13,8 @@ export default class PaginationBoxView extends Component {
     previousLabel         : PropTypes.node,
     nextLabel             : PropTypes.node,
     breakLabel            : PropTypes.node,
+    leftBreakLabel        : PropTypes.node,
+    rightBreakLabel       : PropTypes.node,
     clickCallback         : PropTypes.func,
     initialSelected       : PropTypes.number,
     forceSelected         : PropTypes.number,
@@ -111,6 +113,8 @@ export default class PaginationBoxView extends Component {
             pageRangeDisplayed={this.props.pageRangeDisplayed}
             marginPagesDisplayed={this.props.marginPagesDisplayed}
             breakLabel={this.props.breakLabel}
+            leftBreakLabel={this.props.leftBreakLabel}
+            rightBreakLabel={this.props.rightBreakLabel}
             subContainerClassName={this.props.subContainerClassName}
             pageClassName={this.props.pageClassName}
             pageLinkClassName={this.props.pageLinkClassName}
