@@ -1,6 +1,6 @@
 {
   "name": "react-paginate",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "A ReactJS component that creates a pagination.",
   "main": "./dist/index.js",
   "repository": {
@@ -62,7 +62,12 @@
     "testDirectoryName": "__tests__",
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
-      "<rootDir>/react_components"
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
     ]
   }
 }
